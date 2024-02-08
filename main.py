@@ -1,3 +1,7 @@
+# main.py
+
+import asst
+
 def main():
     pass
 
