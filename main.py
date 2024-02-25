@@ -1,6 +1,6 @@
 # main.py
 
-import asst
+# import assets
 
 def main():
     pass
