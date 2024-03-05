@@ -22,7 +22,9 @@ ResonanceAssistant是一个基于[MAAFramework](https://github.com/MaaXYZ/MaaFra
 
 如果您有开发意愿，欢迎您来参与制作 ~~我太菜了啥也不会~~
 
-This is a software based on [MAAFramework](https://github.com/MaaXYZ/MaaFramework) to realize the game "Resonance" automatic clearing daily and maximize the train runner income
+## 使用说明
 
-This project is still developing...
+- ####  1 下载Release或者直接clone代码
+
+- ####  2 启动MaaPiCli.exe
 
