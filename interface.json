@@ -3,8 +3,6 @@
         {
             "name": "ADB 默认方式",
             "type": "Adb",
-            "touch": 254,
-            "key": 65024,
             "screencap": 16646144
         }
     ],
