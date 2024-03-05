@@ -1,0 +1,13 @@
+{
+    "StartUp":{
+        "next":[
+            "Sub_StartResonance",
+            "Stop"
+        ]
+    },
+    "Sub_StartResonance": {
+        "action": "StartApp",
+        "package": "com.hermes.goda/com.hermes.goda.MainActivity"
+    },
+    "Stop":{}
+}

@@ -1,0 +1,36 @@
+{
+    "controller": [
+        {
+            "name": "ADB 默认方式",
+            "type": "Adb",
+            "screencap": 16646144
+        }
+    ],
+    "resource": [
+        {
+            "name": "官服",
+            "path": [
+                "{PROJECT_DIR}/resource"
+            ]
+        }
+    ],
+    "task": [
+        {
+            "name": "启动游戏",
+            "entry": "StartUp"
+        },
+        {
+            "name": "清理澄清度",
+            "entry": "Combat"
+        },
+        {
+            "name": "列车行驶时自动接敌",
+            "entry": "Auto_Combat"
+        },
+        {
+            "name": "关闭游戏",
+            "entry": "CloseApp"
+        }
+    ],
+    "version": "v0.1"
+}

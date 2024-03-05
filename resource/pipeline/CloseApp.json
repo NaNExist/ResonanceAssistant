@@ -1,0 +1,6 @@
+{
+    "CloseApp": {
+        "action": "StopApp",
+        "package": "com.hermes.goda"
+    }
+}
