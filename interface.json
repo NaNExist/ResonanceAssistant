@@ -1,0 +1,33 @@
+{
+    "controller": [
+        {
+            "name": "ADB 默认方式",
+            "type": "Adb",
+            "touch": 254,
+            "key": 65024,
+            "screencap": 16646144
+        }
+    ],
+    "resource": [
+        {
+            "name": "Official",
+            "path": [
+                "{PROJECT_DIR}/resource"
+            ]
+        }
+    ],
+    "task": [
+        {
+            "name": "启动游戏",
+            "entry": "StartUp"
+        },
+        {
+            "name": "清理澄清度",
+            "entry": "Combat"
+        },
+        {
+            "name": "列车行驶时自动接敌",
+            "entry": "Awards"
+        }
+    ]
+}
