@@ -1,8 +1,10 @@
 # ResonanceAssistant
 
-ResonanceAssistant是一个基于[MAAFramework](https://github.com/MaaXYZ/MaaFramework)框架实现游戏[《雷索纳斯》](https://soli-reso.com/)自动清日常和~~最大化列车跑商收益~~的软件
+ResonanceAssistant是一个基于[MAAFramework](https://github.com/MaaXYZ/MaaFramework)框架实现游戏[《雷索纳斯》](https://soli-reso.com/)自动清日常和~~最大化列车跑商收益~~的软件。
 
-什么你问我为什么具体功能还没实现？~~因为咕咕咕了还没做~~
+什么你问我为好多功能还没实现？~~因为咕咕咕了还没做~~
+
+已经在做啦！目前已经能启动和关闭游戏了，现在下一步目标是完善启动游戏的逻辑和实现自动清理铁安局任务。
 
 ### 当前目标：
 
