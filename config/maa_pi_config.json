@@ -1,0 +1,15 @@
+{
+    "controller": {
+        "adb_path": "C:/Program Files/YXResonanceSolstice-12.0/shell/adb.exe",
+        "address": "127.0.0.1:16384",
+        "name": "ADB 默认方式"
+    },
+    "resource": "官服",
+    "task": [
+        {
+            "name": "关闭游戏",
+            "option": [
+            ]
+        }
+    ]
+}

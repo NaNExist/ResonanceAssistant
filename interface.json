@@ -26,6 +26,10 @@
         {
             "name": "列车行驶时自动接敌",
             "entry": "Auto_Combat"
+        },
+        {
+            "name": "关闭游戏",
+            "entry": "CloseApp"
         }
     ],
     "version": "v0.1"

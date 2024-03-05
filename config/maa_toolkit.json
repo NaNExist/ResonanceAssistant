@@ -1,0 +1,8 @@
+{
+    "policy": {
+        "logging": true,
+        "recording": false,
+        "save_draw": false,
+        "stdout_level": 2
+    }
+}
