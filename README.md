@@ -10,7 +10,11 @@ ResonanceAssistant是一个基于[MAAFramework](https://github.com/MaaXYZ/MaaFra
 
 - 接入[MAAFramework](https://github.com/MaaXYZ/MaaFramework)实现基础清日常
   
-  - 实现基础管线任务
+  - 增加说明文档
+
+  - 重构文件存放位置，区分开发和Release
+
+  - 完善基础管线任务
 
 ### 长期目标：
 
