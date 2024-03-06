@@ -1,10 +1,13 @@
 # ResonanceAssistant
 
-ResonanceAssistant是一个基于[MAAFramework](https://github.com/MaaXYZ/MaaFramework)框架实现游戏[《雷索纳斯》](https://soli-reso.com/)自动清日常和~~最大化列车跑商收益~~的软件。
+ResonanceAssistant是一个基于[MAAFramework](https://github.com/MaaXYZ/MaaFramework)框架实现游戏[《雷索纳斯》](https://soli-reso.com/)自动清日常和~~最大化列车跑商收益~~的软件。\
 
-什么你问我为好多功能还没实现？~~因为咕咕咕了还没做~~
+基于全新架构的 列车长 小助手。图像技术 + 模拟控制，解放双手！
+由 MaaFramework 强力驱动！
 
-已经在做啦！目前已经能启动和关闭游戏了，现在下一步目标是完善启动游戏的逻辑和实现自动清理铁安局任务。
+什么你问我为好多功能还没实现？~~因为咕咕咕了还没做完~~
+
+已经在做啦！
 
 ### 当前目标：
 
@@ -26,11 +29,24 @@ ResonanceAssistant是一个基于[MAAFramework](https://github.com/MaaXYZ/MaaFra
 
 - 自动跑商
 
-如果您有开发意愿，欢迎您来参与制作 ~~我太菜了啥也不会~~
-
 ## 使用说明
 
-- ####  1 下载Release或者直接clone代码
+#### 开始使用ResonanceAssistant看这里：[快速开始](docs/zh_cn/Start/快速开始.md)
 
-- ####  2 启动MaaPiCli.exe
+#### 想要参与开发看这里：[开发指南](docs/zh_cn/Develop/开发指南.md)
 
+## 写在后面的话
+
+在开始这个项目之前，我没有任何开发程序的经验。很多东西都是摸着石头过河，遇到一点问题就去学一点解决一点。所以开发进度慢，逻辑混乱说明的还请您见谅QAQ。
+
+## 许可证
+
+`ResonanceAssistant` 采用 [`AGPL-3.0`](./LICENSE.md) 许可证进行开源。
+
+## 鸣谢
+
+感谢以下开发者对 MaaFramework 作出的卓越贡献： ~~怎么现在只有我一个~~
+
+<a href="https://github.com/NaNExist/ResonanceAssistant/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=NaNExist/ResonanceAssistant&max=1000" />
+</a>
