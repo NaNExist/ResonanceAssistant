@@ -25,7 +25,7 @@ ResonanceAssistant是一个基于[MAAFramework](https://github.com/MaaXYZ/MaaFra
 
 - 计算跑商最大化收益路线
 
-- 搭建网站实现商品数据实时监测&上传
+- 实现商品数据实时监测&上传(可能是最重要的一点)
 
 - 自动跑商
 
