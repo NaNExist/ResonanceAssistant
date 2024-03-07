@@ -1,0 +1,52 @@
+{
+    "Combat": {
+        "next":[
+            "GoToCombat"
+        ]
+    },
+    "GoToCombat":{
+        "enabled": true,
+        "recognition": "OCR",
+        "text": "前往作战",
+        "action": "Click",
+        "next":[
+            "StartCombat",
+            "CheckSanity",
+            "CheckSanity2"
+        ]
+    },
+    "CheckSanity": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/CheckSanity.png",
+        "next":[
+            "Stop"
+        ]
+    },
+    "CheckSanity2": {
+        "recognition": "OCR",
+        "text": "请选择恢复方式",
+        "next":[
+            "Stop"
+        ]
+    },
+    "StartCombat":{
+        "recognition": "TemplateMatch",
+        "template": "Combat/StartCombat.png",
+        "action": "Click",
+        "post_wait_freezes":{
+            "time": 5000,
+            "target": [722, 419, 506, 107]
+        },
+        "next":[
+            "CheckCombatFinished"
+        ]
+    },
+    "CheckCombatFinished":{
+        "recognition": "TemplateMatch",
+        "template": "Combat/NextStep.png",
+        "action": "Click",
+        "next":[
+            "GoToCombat"
+        ]
+    }
+}
