@@ -1,28 +1,37 @@
 {
     "Combat": {
         "next":[
-            "GoToCombat"
+            "Sub_GoToCombat"
+        ]
+    },
+    "Sub_GoToCombat": {
+        "is_sub": true,
+        "next":[
+            "GoToCombat",
+            "Sub_CheckSituation"
         ]
     },
     "GoToCombat":{
         "enabled": true,
         "recognition": "OCR",
         "text": "前往作战",
-        "action": "Click",
+        "action": "Click"
+    },
+    "Sub_CheckSituation":{
         "next":[
             "StartCombat",
-            "CheckSanity",
-            "CheckSanity2"
+            "CheckSanity_DailyOff",
+            "CheckSanity_DailyOn"
         ]
     },
-    "CheckSanity": {
+    "CheckSanity_DailyOff": {
         "recognition": "TemplateMatch",
         "template": "Combat/CheckSanity.png",
         "next":[
             "Stop"
         ]
     },
-    "CheckSanity2": {
+    "CheckSanity_DailyOn": {
         "recognition": "OCR",
         "text": "请选择恢复方式",
         "next":[
@@ -44,9 +53,6 @@
     "CheckCombatFinished":{
         "recognition": "TemplateMatch",
         "template": "Combat/NextStep.png",
-        "action": "Click",
-        "next":[
-            "GoToCombat"
-        ]
+        "action": "Click"
     }
 }
