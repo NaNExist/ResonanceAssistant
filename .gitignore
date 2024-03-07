@@ -1,5 +1,6 @@
-*。log
+*.log
 /config
 /debug
 *.dll
 *.exe
+/soucre/model
