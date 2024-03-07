@@ -1,3 +1,5 @@
 *。log
 /config
 /debug
+*.dll
+*.exe
