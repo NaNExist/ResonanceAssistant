@@ -1,15 +1,15 @@
 {
-    "GetBack":{
+    "GetBack": {
         "recognition": "TemplateMatch",
         "template": "General/GetBack.png",
         "action": "Click"
     },
-    "Cancel":{
+    "Cancel": {
         "recognition": "OCR",
         "text": "取消",
         "action": "Click"
     },
-    "Stop":{
+    "Stop": {
         "action": "StopTask"
     }
 }
