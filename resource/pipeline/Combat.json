@@ -1,24 +1,24 @@
 {
     "Combat": {
-        "next":[
+        "next": [
             "Sub_GoToCombat"
         ]
     },
     "Sub_GoToCombat": {
         "is_sub": true,
-        "next":[
+        "next": [
             "GoToCombat",
             "Sub_CheckSituation"
         ]
     },
-    "GoToCombat":{
+    "GoToCombat": {
         "enabled": true,
         "recognition": "OCR",
         "text": "前往作战",
         "action": "Click"
     },
-    "Sub_CheckSituation":{
-        "next":[
+    "Sub_CheckSituation": {
+        "next": [
             "StartCombat",
             "CheckSanity_DailyOff",
             "CheckSanity_DailyOn"
@@ -27,30 +27,47 @@
     "CheckSanity_DailyOff": {
         "recognition": "TemplateMatch",
         "template": "Combat/CheckSanity.png",
-        "next":[
+        "roi": [
+            473,
+            338,
+            424,
+            47
+        ],
+        "next": [
             "Stop"
         ]
     },
     "CheckSanity_DailyOn": {
         "recognition": "OCR",
         "text": "请选择恢复方式",
-        "next":[
+        "roi": [
+            354,
+            428,
+            198,
+            39
+        ],
+        "next": [
             "Stop"
         ]
     },
-    "StartCombat":{
+    "StartCombat": {
         "recognition": "TemplateMatch",
         "template": "Combat/StartCombat.png",
         "action": "Click",
-        "post_wait_freezes":{
-            "time": 5000,
-            "target": [722, 419, 506, 107]
+        "post_wait_freezes": {
+            "time": 3000,
+            "target": [
+                722,
+                419,
+                506,
+                107
+            ]
         },
-        "next":[
+        "next": [
             "CheckCombatFinished"
         ]
     },
-    "CheckCombatFinished":{
+    "CheckCombatFinished": {
         "recognition": "TemplateMatch",
         "template": "Combat/NextStep.png",
         "action": "Click"

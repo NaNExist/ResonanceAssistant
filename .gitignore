@@ -1,3 +1,7 @@
-*。log
+*.log
 /config
 /debug
+*.dll
+*.exe
+/resource/model
+/MaaAgentBinary
