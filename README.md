@@ -31,7 +31,7 @@ ResonanceAssistant是一个基于[MAAFramework](https://github.com/MaaXYZ/MaaFra
 
 ### 长期目标：
 
-- 实现GUI
+- 实现GUI~~现在盘算着用Qt开发~~
 
 - 计算跑商最大化收益路线
 
