@@ -1,0 +1,74 @@
+{
+    "Drive_Combat": {
+        "next": [
+            "ExitStation"
+        ]
+    },
+    "ExitStation":{
+        "recognition" :"TemplateMatch",
+        "template": "Drive/GoToDestination.png",
+        "roi": [940, 603, 275, 74],
+        "action":"Click",
+        "next":[
+            "Sub_CheckDrivingSituation"
+        ]
+    },
+    "Sub_CheckDrivingSituation": {
+        "is_sub": true,
+        "post_wait_freezes": {
+            "time": 3000,
+            "target": [
+                24,
+                32,
+                160,
+                161
+            ]
+        },
+        "next": [
+            "IsArrived",
+            "IsMeet_TheEnemy",
+            "IsStopped"
+        ]
+    },
+    "IsArrived": {
+        "recognition": "TemplateMatch",
+        "template": "Drive/EnterStation.png",
+        "roi": [
+            780,
+            321,
+            202,
+            144
+        ],
+        "action": "Click",
+        "next": [
+            "Stop"
+        ]
+    },
+    "IsStopped": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "Drive/SetForward.png",
+        "roi": [
+            1218,
+            588,
+            54,
+            50
+        ],
+        "action": "Click"
+    },
+    "IsMeet_TheEnemy": {
+        "is_sub": true,
+        "recognition": "FeatureMatch",
+        "template": "Drive/IsMeet_TheEnemy.png",
+        "roi": [
+            892,
+            181,
+            226,
+            137
+        ],
+        "action": "Click",
+        "next": [
+            "StartCombat"
+        ]
+    }
+}
