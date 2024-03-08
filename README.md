@@ -25,7 +25,7 @@ ResonanceAssistant是一个基于[MAAFramework](https://github.com/MaaXYZ/MaaFra
 
 - 计算跑商最大化收益路线
 
-- 实现商品数据实时监测&上传(可能是最重要的一点)
+- 实现商品数据实时监测&上传(可能是最重要的一点) Upd:好像可以抓包获取，那就不考虑用图像识别实现这个功能了
 
 - 自动跑商
 
@@ -45,7 +45,7 @@ ResonanceAssistant是一个基于[MAAFramework](https://github.com/MaaXYZ/MaaFra
 
 ## 鸣谢
 
-感谢以下开发者对 MaaFramework 作出的卓越贡献： ~~怎么现在只有我一个~~
+感谢以下开发者对 ResonanceAssistant 作出的卓越贡献： ~~怎么现在只有我一个~~
 
 <a href="https://github.com/NaNExist/ResonanceAssistant/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=NaNExist/ResonanceAssistant&max=1000" />
