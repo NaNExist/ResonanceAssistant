@@ -61,4 +61,6 @@ ResonanceAssistant是一个基于[MAAFramework](https://github.com/MaaXYZ/MaaFra
   <img src="https://contrib.rocks/image?repo=NaNExist/ResonanceAssistant&max=1000" />
 </a>
 
+## 讨论
+
 ResonanceAssistant交流群: 752529322
