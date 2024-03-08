@@ -1,5 +1,8 @@
-# ResonanceAssistant
+<p align="center"><img src="/resource/image/General/Gallery.png" /> </p>
 
+<div align="center">
+# ResonanceAssistant
+</div>
 ResonanceAssistant是一个基于[MAAFramework](https://github.com/MaaXYZ/MaaFramework)框架实现游戏[《雷索纳斯》](https://soli-reso.com/)自动清日常和~~最大化列车跑商收益~~的软件。
 
 基于全新架构的 列车长 小助手。图像技术 + 模拟控制，解放双手！
