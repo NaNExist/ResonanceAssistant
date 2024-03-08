@@ -26,7 +26,7 @@
             "entry": "Combat"
         },
         {
-            "name": "列车行驶时自动接敌",
+            "name": "行驶时自动接敌",
             "entry": "Drive_Combat"
         },
         {

@@ -3,4 +3,5 @@
 /debug
 *.dll
 *.exe
-/soucre/model
+/resource/model
+/MaaAgentBinary
