@@ -6,7 +6,7 @@
 
 <div align="center">
 
-# ResonanceAssistant
+# **Resonance Assistant**
 
 </div>
 
