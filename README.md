@@ -1,4 +1,14 @@
+<p align="center">
+
+<img src="/resource/image/General/Gallery.png" />
+
+</p>
+
+<div align="center">
+
 # ResonanceAssistant
+
+</div>
 
 ResonanceAssistant是一个基于[MAAFramework](https://github.com/MaaXYZ/MaaFramework)框架实现游戏[《雷索纳斯》](https://soli-reso.com/)自动清日常和~~最大化列车跑商收益~~的软件。
 
@@ -21,7 +31,7 @@ ResonanceAssistant是一个基于[MAAFramework](https://github.com/MaaXYZ/MaaFra
 
 ### 长期目标：
 
-- 实现GUI
+- 实现GUI~~现在盘算着用Qt开发~~
 
 - 计算跑商最大化收益路线
 
@@ -50,3 +60,7 @@ ResonanceAssistant是一个基于[MAAFramework](https://github.com/MaaXYZ/MaaFra
 <a href="https://github.com/NaNExist/ResonanceAssistant/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=NaNExist/ResonanceAssistant&max=1000" />
 </a>
+
+## 讨论
+
+ResonanceAssistant交流群: 752529322
