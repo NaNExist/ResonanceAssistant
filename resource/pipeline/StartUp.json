@@ -1,6 +1,6 @@
 {
-    "StartUp":{
-        "next":[
+    "StartUp": {
+        "next": [
             "Sub_StartResonance"
         ]
     },
