@@ -1,21 +1,8 @@
 {
     "Drive_Combat": {
         "next": [
-            "Sub_CheckDrivingSituation",
-            "Sub_ExitStation"
+            "Sub_CheckDrivingSituation"
         ]
-    },
-    "Sub_ExitStation": {
-        "is_sub": true,
-        "recognition": "TemplateMatch",
-        "template": "Drive/GoToDestination.png",
-        "roi": [
-            940,
-            603,
-            275,
-            74
-        ],
-        "action": "Click"
     },
     "Sub_CheckDrivingSituation": {
         "is_sub": true,
@@ -29,10 +16,28 @@
             ]
         },
         "next": [
+            "Sub_ExitStation",
             "IsArrived",
             "IsMeet_TheEnemy",
             "IsStopped"
         ]
+    },
+    "Sub_ExitStation": {
+        "is_sub": true,
+        "next":[
+            "Exitstation"
+        ]
+    },
+    "Exitstation":{
+        "recognition": "TemplateMatch",
+        "template": "Drive/GoToDestination.png",
+        "roi": [
+            940,
+            603,
+            275,
+            74
+        ],
+        "action": "Click"
     },
     "IsArrived": {
         "recognition": "TemplateMatch",
