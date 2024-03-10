@@ -9,26 +9,20 @@
         "post_wait_freezes": {
             "time": 3000,
             "target": [
-                24,
-                32,
-                160,
-                161
+                54,
+                59,
+                100,
+                102
             ]
         },
         "next": [
-            "Sub_ExitStation",
+            "ExitStation",
             "IsArrived",
             "IsMeet_TheEnemy",
             "IsStopped"
         ]
     },
-    "Sub_ExitStation": {
-        "is_sub": true,
-        "next":[
-            "Exitstation"
-        ]
-    },
-    "Exitstation":{
+    "ExitStation": {
         "recognition": "TemplateMatch",
         "template": "Drive/GoToDestination.png",
         "roi": [
