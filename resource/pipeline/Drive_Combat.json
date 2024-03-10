@@ -1,10 +1,12 @@
 {
     "Drive_Combat": {
         "next": [
-            "ExitStation"
+            "Sub_CheckDrivingSituation",
+            "Sub_ExitStation"
         ]
     },
-    "ExitStation": {
+    "Sub_ExitStation": {
+        "is_sub": true,
         "recognition": "TemplateMatch",
         "template": "Drive/GoToDestination.png",
         "roi": [
@@ -13,10 +15,7 @@
             275,
             74
         ],
-        "action": "Click",
-        "next": [
-            "Sub_CheckDrivingSituation"
-        ]
+        "action": "Click"
     },
     "Sub_CheckDrivingSituation": {
         "is_sub": true,

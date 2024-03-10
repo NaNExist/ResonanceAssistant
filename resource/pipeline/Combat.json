@@ -55,7 +55,7 @@
         "template": "Combat/StartCombat.png",
         "action": "Click",
         "post_wait_freezes": {
-            "time": 3000,
+            "time": 5000,
             "target": [
                 722,
                 419,
