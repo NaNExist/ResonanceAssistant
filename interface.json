@@ -33,6 +33,5 @@
             "name": "关闭游戏",
             "entry": "CloseApp"
         }
-    ],
-    "version": "v0.2.1"
+    ]
 }
