@@ -7,7 +7,8 @@
     "Sub_CheckDrivingSituation": {
         "is_sub": true,
         "post_wait_freezes": {
-            "time": 3000,
+            "time": 1000,
+            "threshold": 0.70,
             "target": [
                 54,
                 59,
@@ -17,11 +18,11 @@
         },
         "next": [
             "IsMeet_TheEnemy",
-            "Sub_StartCombat",
-            "Sub_CheckCombatFinished",
             "IsArrived",          
             "IsStopped",
-            "ExitStation"
+            "ExitStation",
+            "StartCombat",
+            "CheckCombatFinished"
         ]
     },
     "ExitStation": {
@@ -61,7 +62,7 @@
         "action": "Click"
     },
     "IsMeet_TheEnemy": {
-        "recognition": "FeatureMatch",
+        "recognition": "TemplateMatch",
         "template": "Drive/IsMeet_TheEnemy.png",
         "roi": [
             892,

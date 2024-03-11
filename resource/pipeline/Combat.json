@@ -21,8 +21,8 @@
         "next": [
             "CheckSanity_DailyOff",
             "CheckSanity_DailyOn",
-            "Sub_StartCombat",
-            "Sub_CheckCombatFinished"
+            "StartCombat",
+            "CheckCombatFinished"
         ]
     },
     "CheckSanity_DailyOff": {
@@ -66,6 +66,7 @@
         "is_sub": true,
         "post_wait_freezes": {
             "time": 5000,
+            "threshold": 0.80,
             "target": [
                 722,
                 419,
@@ -78,6 +79,16 @@
         ]
     },
     "CheckCombatFinished": {
+        "pre_wait_freezes": {
+            "time": 2000,
+            "threshold": 0.80,
+            "target": [
+                722,
+                419,
+                506,
+                107
+            ]
+        },
         "recognition": "TemplateMatch",
         "template": "Combat/NextStep.png",
         "action": "Click"
