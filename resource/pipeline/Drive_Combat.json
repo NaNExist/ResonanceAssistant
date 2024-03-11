@@ -16,10 +16,12 @@
             ]
         },
         "next": [
-            "ExitStation",
-            "IsArrived",
             "IsMeet_TheEnemy",
-            "IsStopped"
+            "Sub_StartCombat",
+            "Sub_CheckCombatFinished",
+            "IsArrived",          
+            "IsStopped",
+            "ExitStation"
         ]
     },
     "ExitStation": {
@@ -48,7 +50,6 @@
         ]
     },
     "IsStopped": {
-        "is_sub": true,
         "recognition": "TemplateMatch",
         "template": "Drive/SetForward.png",
         "roi": [
@@ -60,7 +61,6 @@
         "action": "Click"
     },
     "IsMeet_TheEnemy": {
-        "is_sub": true,
         "recognition": "FeatureMatch",
         "template": "Drive/IsMeet_TheEnemy.png",
         "roi": [
@@ -69,9 +69,6 @@
             226,
             137
         ],
-        "action": "Click",
-        "next": [
-            "StartCombat"
-        ]
+        "action": "Click"
     }
 }

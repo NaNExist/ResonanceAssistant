@@ -8,7 +8,7 @@
         "is_sub": true,
         "next": [
             "GoToCombat",
-            "Sub_CheckSituation"
+            "CheckSituation"
         ]
     },
     "GoToCombat": {
@@ -17,11 +17,12 @@
         "text": "前往作战",
         "action": "Click"
     },
-    "Sub_CheckSituation": {
+    "CheckSituation": {
         "next": [
-            "StartCombat",
             "CheckSanity_DailyOff",
-            "CheckSanity_DailyOn"
+            "CheckSanity_DailyOn",
+            "Sub_StartCombat",
+            "Sub_CheckCombatFinished"
         ]
     },
     "CheckSanity_DailyOff": {
@@ -50,10 +51,19 @@
             "Stop"
         ]
     },
+    "Sub_StartCombat": {
+        "is_sub": true,
+        "next": [
+            "StartCombat"
+        ]
+    },
     "StartCombat": {
         "recognition": "TemplateMatch",
-        "template": "Combat/StartCombat.png",
-        "action": "Click",
+        "template": "Combat/Sub_StartCombat.png",
+        "action": "Click"
+    },
+    "Sub_CheckCombatFinished":{
+        "is_sub": true,
         "post_wait_freezes": {
             "time": 5000,
             "target": [
@@ -63,7 +73,7 @@
                 107
             ]
         },
-        "next": [
+        "next":[
             "CheckCombatFinished"
         ]
     },
