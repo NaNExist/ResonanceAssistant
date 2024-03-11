@@ -59,7 +59,7 @@
     },
     "StartCombat": {
         "recognition": "TemplateMatch",
-        "template": "Combat/Sub_StartCombat.png",
+        "template": "Combat/StartCombat.png",
         "action": "Click"
     },
     "Sub_CheckCombatFinished":{
