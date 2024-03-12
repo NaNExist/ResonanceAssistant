@@ -29,7 +29,7 @@ if __name__ == "__main__":
 
     shutil.copytree(
         working_dir / "assets" / "resource",
-        install_path,
+        install_path / "resource",
         dirs_exist_ok=True,
     )
     shutil.copy2(
