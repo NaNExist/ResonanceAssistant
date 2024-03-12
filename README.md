@@ -65,7 +65,7 @@ ResonanceAssistant是一个基于[MAAFramework](https://github.com/MaaXYZ/MaaFra
 
 ## 鸣谢
 
-感谢以下开发者对 ResonanceAssistant 作出的卓越贡献： ~~怎么现在只有我一个~~
+感谢以下开发者对 ResonanceAssistant 作出的卓越贡献： 
 
 <a href="https://github.com/NaNExist/ResonanceAssistant/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=NaNExist/ResonanceAssistant&max=1000" />
