@@ -1,0 +1,69 @@
+{
+    "controller": [
+        {
+            "name": "ADB 默认方式",
+            "type": "Adb",
+            "touch": 254,
+            "key": 65024,
+            "screencap": 16646144
+        }
+    ],
+    "resource": [
+        {
+            "name": "官服",
+            "path": [
+                "{PROJECT_DIR}/resource"
+            ]
+        }
+    ],
+    "task": [
+        {
+            "name": "启动游戏",
+            "entry": "StartUp"
+        },
+        {
+            "name": "清理澄清度",
+            "entry": "Combat"
+        },
+        {
+            "name": "行驶时自动接敌",
+            "entry": "Drive_Combat",
+            "option": [
+                "是否使用急行弹丸"
+            ]
+        },
+        {
+            "name": "关闭游戏",
+            "entry": "CloseApp"
+        }
+    ],
+    "recognizer": {},
+    "action": {},
+    "option": {
+        "是否使用急行弹丸": {
+            "cases": [
+                {
+                    "name": "使用急行弹丸",
+                    "param": {
+                        "Sub_CheckDrivingSituation": {
+                            "next": [
+                                "UseBullet",
+                                "Sub_DuringStop"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "不使用急行弹丸",
+                    "param": {
+                        "Sub_CheckDrivingSituation": {
+                            "next": [
+                                "Sub_DuringStop"
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
