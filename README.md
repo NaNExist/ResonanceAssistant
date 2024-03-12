@@ -1,6 +1,6 @@
 <p align="center">
 
-<img src="/resource/image/General/Gallery.png" />
+<img src="assets/resource/image/General/Gallery.png" />
 
 </p>
 

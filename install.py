@@ -5,11 +5,10 @@ import sys
 import json
 
 working_dir = Path(__file__).parent
-# version = len(sys.argv) > 1 and sys.argv[1] or "v0.0.1"
+install_path = working_dir / Path("install")
+version = len(sys.argv) > 1 and sys.argv[1] or "v0.0.1"
 
 if __name__ == "__main__":
-    version=input("version: ")
-    install_path = working_dir / Path("install/"+"ResonanceAssistant-"+version)
     shutil.copytree(
         working_dir / "deps" / "bin",
         install_path,
@@ -37,7 +36,7 @@ if __name__ == "__main__":
         install_path,
     )
     shutil.copytree(
-        working_dir / "assets" /"MaaCommonAssets" / "OCR" / "ppocr_v4" / "zh_cn",
+        working_dir / "assets" / "MaaCommonAssets" / "OCR" / "ppocr_v4" / "zh_cn",
         install_path / "resource" / "model" / "ocr",
         dirs_exist_ok=True,
     )
