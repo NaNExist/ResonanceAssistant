@@ -51,9 +51,9 @@ ResonanceAssistant是一个基于[MAAFramework](https://github.com/MaaXYZ/MaaFra
 
 ## 使用说明
 
-#### 开始使用ResonanceAssistant看这里：[快速开始](docs/zh_cn/Start/快速开始.md)
+#### 开始使用ResonanceAssistant看这里：[快速开始](assets/docs/zh_cn/Start/快速开始.md)
 
-#### 想要参与开发看这里：[开发指南](docs/zh_cn/Develop/开发指南.md)
+#### 想要参与开发看这里：[开发指南](assets/docs/zh_cn/Develop/开发指南.md)
 
 ## 写在后面的话
 
