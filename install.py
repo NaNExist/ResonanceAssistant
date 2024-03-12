@@ -1,8 +1,8 @@
-from pathlib import Path
-
 import shutil
 import sys
 import json
+
+from pathlib import Path
 
 working_dir = Path(__file__).parent
 install_path = working_dir / Path("install")

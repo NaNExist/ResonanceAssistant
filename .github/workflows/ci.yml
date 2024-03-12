@@ -1,27 +1,29 @@
-name: install
+name: CI
 
 on:
   push:
     tags:
       - "v*"
-    branches:
-      - "**"
+    branches-ignore:
+      - "master"
     paths:
-      - ".github/workflows/ci.yml"
+      - ".github/workflows/**"
       - "assets/**"
+      - "!**/*.md"
   pull_request:
     branches:
-      - "**"
+      - "dev"
     paths:
-      - ".github/workflows/ci.yml"
+      - ".github/workflows/**"
       - "assets/**"
+      - "!**/*.md"
   workflow_dispatch:
 
 jobs:
   meta:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - id: set_tag
@@ -29,7 +31,7 @@ jobs:
           is_release=${{ startsWith(github.ref, 'refs/tags/v') }}
           tag=$(git describe --tags --match "v*" ${{ github.ref }} || true)
           if [[ $tag != v* ]]; then
-            tag=$(curl -sX GET "https://api.github.com/repos/NaNExist/ResonanceAssistant/releases/latest" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | awk '/tag_name/{print $4}' FS='["]')
+            tag=$(curl -sX GET "https://api.github.com/repos/${{ github.repository }}/releases/latest" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | awk '/tag_name/{print $4}' FS='["]')
             if [[ $tag != v* ]]; then
               tag="v0.0.0"
             fi
@@ -56,12 +58,12 @@ jobs:
       fail-fast: false
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: true
 
       - name: Download MaaFramework
-        uses: robinraju/release-downloader@v1.8
+        uses: robinraju/release-downloader@v1.9
         with:
           repository: MaaXYZ/MaaFramework
           fileName: "MAA-win-${{ matrix.arch }}*"
@@ -74,7 +76,7 @@ jobs:
         run: |
           python ./install.py ${{ needs.meta.outputs.tag }}
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: RAA-win-${{ matrix.arch }}
           path: "install"
@@ -95,12 +97,12 @@ jobs:
           pacman -S --noconfirm python git
 
       # https://github.com/MaaXYZ/MaaFramework/actions/runs/5643408179/job/15285186255
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: true
 
       - name: Download MaaFramework
-        uses: robinraju/release-downloader@v1.8
+        uses: robinraju/release-downloader@v1.9
         with:
           repository: MaaXYZ/MaaFramework
           fileName: "MAA-linux-${{ matrix.arch }}*"
@@ -113,7 +115,7 @@ jobs:
         run: |
           python ./install.py ${{ needs.meta.outputs.tag }}
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: RAA-linux-${{ matrix.arch }}
           path: "install"
@@ -127,12 +129,12 @@ jobs:
       fail-fast: false
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: true
 
       - name: Download MaaFramework
-        uses: robinraju/release-downloader@v1.8
+        uses: robinraju/release-downloader@v1.9
         with:
           repository: MaaXYZ/MaaFramework
           fileName: "MAA-macos-${{ matrix.arch }}*"
@@ -145,7 +147,7 @@ jobs:
         run: |
           python ./install.py ${{ needs.meta.outputs.tag }}
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: RAA-macos-${{ matrix.arch }}
           path: "install"
@@ -155,7 +157,8 @@ jobs:
     needs: [meta, windows, ubuntu, macos]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/download-artifact@v3
+      - name: Download from Github
+        uses: actions/download-artifact@v4
         with:
           path: assets
 
