@@ -7,13 +7,13 @@ on:
     branches:
       - "**"
     paths:
-      - ".github/workflows/ci.yml"
+      - ".github/workflows/**"
       - "assets/**"
   pull_request:
     branches:
       - "**"
     paths:
-      - ".github/workflows/ci.yml"
+      - ".github/workflows/**"
       - "assets/**"
   workflow_dispatch:
 
