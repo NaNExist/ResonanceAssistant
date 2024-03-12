@@ -9,12 +9,6 @@
         "is_sub": true,
         "timeout": 1000
     },
-    "Sub_UseDuringDriving": {
-        "timeout": 1000,
-        "next":[
-            "UseBullet"
-        ]
-    },
     "Sub_DuringStop": {
         "timeout": 1000,
         "next": [
