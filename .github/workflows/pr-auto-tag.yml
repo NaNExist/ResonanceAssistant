@@ -52,4 +52,5 @@ jobs:
       - name: Release tag
         run: |
           gh workflow run CI --repo ${{ github.repository }} --ref ${{ steps.extract_tag.outputs.tag_name }}
-        
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
