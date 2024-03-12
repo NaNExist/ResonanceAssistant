@@ -1,0 +1,37 @@
+{
+    "controller": [
+        {
+            "name": "ADB 默认方式",
+            "type": "Adb",
+            "touch": 254,
+            "key": 65024,
+            "screencap": 16646144
+        }
+    ],
+    "resource": [
+        {
+            "name": "官服",
+            "path": [
+                "{PROJECT_DIR}/resource"
+            ]
+        }
+    ],
+    "task": [
+        {
+            "name": "启动游戏",
+            "entry": "StartUp"
+        },
+        {
+            "name": "清理澄清度",
+            "entry": "Combat"
+        },
+        {
+            "name": "行驶时自动接敌",
+            "entry": "Drive_Combat"
+        },
+        {
+            "name": "关闭游戏",
+            "entry": "CloseApp"
+        }
+    ]
+}

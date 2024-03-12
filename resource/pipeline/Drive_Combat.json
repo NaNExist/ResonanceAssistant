@@ -1,34 +1,29 @@
 {
     "Drive_Combat": {
         "next": [
-            "IsArrived",
             "Sub_CheckDrivingSituation"
         ]
     },
     "Sub_CheckDrivingSituation": {
         "is_sub": true,
-        "timeout": 1000
-    },
-    "Sub_DuringStop": {
-        "timeout": 1000,
+        "post_wait_freezes": {
+            "time": 1000,
+            "threshold": 0.70,
+            "target": [
+                54,
+                59,
+                100,
+                102
+            ]
+        },
         "next": [
             "IsMeet_TheEnemy",
-            "ExitStation",
+            "IsArrived",          
             "IsStopped",
+            "ExitStation",
             "StartCombat",
             "CheckCombatFinished"
         ]
-    },
-    "UseBullet": {
-        "recognition": "TemplateMatch",
-        "template": "Drive/Bullet.png",
-        "roi": [
-            1030,
-            626,
-            93,
-            87
-        ],
-        "action": "Click"
     },
     "ExitStation": {
         "recognition": "TemplateMatch",
@@ -50,7 +45,10 @@
             202,
             144
         ],
-        "action": "Click"
+        "action": "Click",
+        "next": [
+            "Stop"
+        ]
     },
     "IsStopped": {
         "recognition": "TemplateMatch",
@@ -73,15 +71,5 @@
             137
         ],
         "action": "Click"
-    },
-    "CheckIsForward": {
-        "recognition": "TemplateMatch",
-        "template": "Drive/IsForward.png",
-        "roi": [
-            1218,
-            588,
-            54,
-            50
-        ]
     }
 }
