@@ -47,7 +47,7 @@
                     "param": {
                         "Sub_CheckDrivingSituation": {
                             "next": [
-                                "Sub_UseDuringDriving",
+                                "UseBullet",
                                 "Sub_DuringStop"
                             ]
                         }
