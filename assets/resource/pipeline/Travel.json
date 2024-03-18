@@ -1,0 +1,153 @@
+{
+    "Travel": {
+        "recognition": "OCR",
+        "text": "启程",
+        "ori": [1160,650,50,20],
+        "action": "Click",
+        "next":[
+            "ChooseStand"
+        ]
+    },
+    "ChooseStand": {
+        "next": [
+            "MoveCameraLeft"
+        ]
+    },
+    "MoveCameraLeft": {
+        "action": "Swipe",
+        "begin": [1200,360,0,0],
+        "end":[200,360,0,0],
+        "next": [
+            "Launch",
+            "Recognition",
+            "MoveCameraLeft1"
+        ]
+    },
+    "MoveCameraLeft1": {
+        "action": "Swipe",
+        "begin": [1200,360,0,0],
+        "end":[200,360,0,0],
+        "next": [
+            "Launch",
+            "Recognition",
+            "MoveCameraDown"
+        ]
+    },
+    "MoveCameraDown": {
+        "action": "Swipe",
+        "begin": [640,680,0,0],
+        "end":[640,280,0,0],
+        "next": [
+            "Launch",
+            "Recognition",
+            "MoveCameraDown1"
+        ]
+    },
+    "MoveCameraDown1": {
+        "action": "Swipe",
+        "begin": [640,680,0,0],
+        "end":[640,280,0,0],
+        "next": [
+            "Launch",
+            "Recognition",
+            "MoveCameraRight"
+        ]
+    },
+    "MoveCameraRight": {
+        "action": "Swipe",
+        "begin": [200,360,0,0],
+        "end":[1200,360,0,0],
+        "next": [
+            "Launch",
+            "Recognition",
+            "MoveCameraRight1"
+        ]
+    },
+    "MoveCameraRight1": {
+        "action": "Swipe",
+        "begin": [200,360,0,0],
+        "end":[1200,360,0,0],
+        "next": [
+            "Launch",
+            "Recognition",
+            "MoveCameraUp"
+        ]
+    },
+    "MoveCameraUp": {
+        "action": "Swipe",
+        "begin": [640,280,0,0],
+        "end":[640,680,0,0],
+        "next": [
+            "Launch",
+            "Recognition",
+            "MoveCameraUp1"
+        ]
+    },
+    "MoveCameraUp1": {
+        "action": "Swipe",
+        "begin": [640,280,0,0],
+        "end":[640,680,0,0],
+        "next": [
+            "Launch",
+            "Recognition",
+            "MoveCameraLeft"
+        ]
+    },
+    "Recognition": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "action": "Click"
+    },
+
+    "Launch": {
+        "recognition": "OCR",
+        "roi": [1000,620,140,40],
+        "text": "前往目的地",
+        "action": "Click",
+        "next": [
+            "DriveCombat"
+        ]
+    },
+    "DriveCombat": {
+        "is_sub": true,
+        "post_delay": 2000,
+        "next": [
+            "EnterCity",
+            "LeaveBattle",
+            "StartBattle",
+            "EnterBattle"
+        ]
+    },
+    "EnterCity": {
+        "recognition": "OCR",
+        "roi": [840,340,110,40],
+        "text": "进入站点",
+        "action": "Click",
+        "next": [
+            "EndDrive"
+        ]
+    },
+    "EndDrive": {
+        "action": "StopTask"
+    },
+    "LeaveBattle": {
+        "recognition": "OCR",
+        "roi": [1120,615,70,25],
+        "text": "下一步",
+        "action": "Click"
+    },
+    "StartBattle": {
+        "recognition": "OCR",
+        "roi": [1040,42,80,20],
+        "text": "快速编队",
+        "action": "Click",
+        "target":[1200,360,0,0]
+    },
+    "EnterBattle": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "roi": [960,242,91,26],
+        "text": "护卫队迎击",
+        "action": "Click"
+    }
+}
