@@ -40,10 +40,6 @@
             ]
         },
         {
-            "name": "进入商店",
-            "entry": "EnterExchange"
-        },
-        {
             "name": "关闭游戏",
             "entry": "CloseApp"
         }
