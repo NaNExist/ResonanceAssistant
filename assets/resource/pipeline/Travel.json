@@ -36,7 +36,7 @@
     "MoveCameraDown": {
         "action": "Swipe",
         "begin": [640,680,0,0],
-        "end":[640,280,0,0],
+        "end":[640,180,0,0],
         "next": [
             "Launch",
             "Recognition",
@@ -46,7 +46,7 @@
     "MoveCameraDown1": {
         "action": "Swipe",
         "begin": [640,680,0,0],
-        "end":[640,280,0,0],
+        "end":[640,180,0,0],
         "next": [
             "Launch",
             "Recognition",
@@ -75,7 +75,7 @@
     },
     "MoveCameraUp": {
         "action": "Swipe",
-        "begin": [640,280,0,0],
+        "begin": [640,180,0,0],
         "end":[640,680,0,0],
         "next": [
             "Launch",
@@ -85,7 +85,7 @@
     },
     "MoveCameraUp1": {
         "action": "Swipe",
-        "begin": [640,280,0,0],
+        "begin": [640,180,0,0],
         "end":[640,680,0,0],
         "next": [
             "Launch",
@@ -109,13 +109,12 @@
         ]
     },
     "DriveCombat": {
-        "is_sub": true,
-        "post_delay": 2000,
         "next": [
             "EnterCity",
             "LeaveBattle",
             "StartBattle",
-            "EnterBattle"
+            "EnterBattle",
+            "MoveCamera"
         ]
     },
     "EnterCity": {
@@ -131,12 +130,14 @@
         "action": "StopTask"
     },
     "LeaveBattle": {
+        "is_sub": true,
         "recognition": "OCR",
         "roi": [1120,615,70,25],
         "text": "下一步",
         "action": "Click"
     },
     "StartBattle": {
+        "is_sub": true,
         "recognition": "OCR",
         "roi": [1040,42,80,20],
         "text": "快速编队",
@@ -149,5 +150,12 @@
         "roi": [960,242,91,26],
         "text": "护卫队迎击",
         "action": "Click"
+    },
+    "MoveCamera": {
+        "is_sub": true,
+        "action": "Swipe",
+        "begin": [640,360,0,0],
+        "end":[640,360,0,0],
+        "duration": 2000
     }
 }
