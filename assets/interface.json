@@ -33,7 +33,7 @@
             ]
         },
         {
-            "name": "选择目的地",
+            "name": "前往其他城市",
             "entry": "Travel",
             "option": [
                 "选择目的地"
@@ -118,5 +118,5 @@
             ]
         }
     },
-    "version": "v0.0.1"
+    "version": "Release"
 }
