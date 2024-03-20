@@ -1,0 +1,36 @@
+{
+    "StartUp": {
+        "next": [
+            "CheckMain",
+            "EnterGame",
+            "ClickBlank",
+            "Sub_StartResonance"
+        ]
+    },
+    "Sub_StartResonance": {
+        "is_sub": true,
+        "action": "StartApp",
+        "package": "com.hermes.goda/com.hermes.goda.MainActivity"
+    },
+    "ClickBlank": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "roi": [210,100,75,45],
+        "text": "公告",
+        "action": "Click",
+        "target": [1,1,0,0]
+    },
+    "EnterGame": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "roi": [560,545,160,25],
+        "text": "点击屏幕进入游戏",
+        "action": "Click"
+    },
+    "CheckMain": {
+        "recognition": "OCR",
+        "roi": [1170,650,40,22],
+        "text": "启程",
+        "action": "StopTask"
+    }
+}

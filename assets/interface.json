@@ -1,0 +1,122 @@
+{
+    "controller": [
+        {
+            "name": "ADB 默认方式",
+            "type": "Adb",
+            "touch": 254,
+            "key": 65024,
+            "screencap": 16646144
+        }
+    ],
+    "resource": [
+        {
+            "name": "官服",
+            "path": [
+                "{PROJECT_DIR}/resource"
+            ]
+        }
+    ],
+    "task": [
+        {
+            "name": "启动游戏",
+            "entry": "StartUp"
+        },
+        {
+            "name": "清理澄清度",
+            "entry": "Combat"
+        },
+        {
+            "name": "行驶时自动接敌",
+            "entry": "Drive_Combat",
+            "option": [
+                "是否使用急行弹丸"
+            ]
+        },
+        {
+            "name": "选择目的地",
+            "entry": "Travel",
+            "option": [
+                "选择目的地"
+            ]
+        },
+        {
+            "name": "关闭游戏",
+            "entry": "CloseApp"
+        }
+    ],
+    "recognizer": {},
+    "action": {},
+    "option": {
+        "是否使用急行弹丸": {
+            "cases": [
+                {
+                    "name": "使用急行弹丸",
+                    "param": {
+                        "Sub_CheckDrivingSituation": {
+                            "next": [
+                                "UseBullet",
+                                "Sub_DuringStop"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "不使用急行弹丸",
+                    "param": {
+                        "Sub_CheckDrivingSituation": {
+                            "next": [
+                                "Sub_DuringStop"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "选择目的地": {
+            "cases": [
+                {
+                    "name": "7号自由港",
+                    "param": {
+                        "Recognition": {
+                            "text": "7号自由港"
+                        }
+                    }
+                },
+                {
+                    "name": "曼德矿场",
+                    "param": {
+                        "Recognition": {
+                            "text": "曼德矿场"
+                        }
+                    }
+                },
+                {
+                    "name": "修格里城",
+                    "param": {
+                        "Recognition": {
+                            "text": "修格里城"
+                        }
+                    }
+                },
+                {
+                    "name": "阿妮塔能源研究所",
+                    "param": {
+                        "Recognition": {
+                            "text": "阿妮塔能源研究所"
+                        }
+                    }
+                },
+                {
+                    "name": "荒原站",
+                    "param": {
+                        "Recognition": {
+                            "text": "荒原站"
+                        }
+                    }
+                }
+
+            ]
+        }
+    },
+    "version": "v0.0.1"
+}
