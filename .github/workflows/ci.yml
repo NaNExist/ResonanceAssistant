@@ -78,7 +78,7 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: RAA-win-${{ matrix.arch }}
+          name: MRA-win-${{ matrix.arch }}
           path: "install"
 
   ubuntu:
@@ -117,7 +117,7 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: RAA-linux-${{ matrix.arch }}
+          name: MRA-linux-${{ matrix.arch }}
           path: "install"
 
   macos:
@@ -149,7 +149,7 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: RAA-macos-${{ matrix.arch }}
+          name: MRA-macos-${{ matrix.arch }}
           path: "install"
 
   release:
