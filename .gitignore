@@ -32,6 +32,9 @@ build-*
 *.a
 *.lib
 
+# Mac OS
+.DS_Store
+
 # Executables
 *.exe
 *.out
