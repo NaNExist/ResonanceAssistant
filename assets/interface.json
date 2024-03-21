@@ -22,7 +22,7 @@
             "entry": "StartUp"
         },
         {
-            "name": "清理澄清度",
+            "name": "清理澄明度",
             "entry": "Combat"
         },
         {
@@ -30,6 +30,13 @@
             "entry": "Drive_Combat",
             "option": [
                 "是否使用急行弹丸"
+            ]
+        },
+        {
+            "name": "前往其他城市",
+            "entry": "Travel",
+            "option": [
+                "选择目的地"
             ]
         },
         {
@@ -64,6 +71,52 @@
                     }
                 }
             ]
+        },
+        "选择目的地": {
+            "cases": [
+                {
+                    "name": "7号自由港",
+                    "param": {
+                        "Recognition": {
+                            "text": "7号自由港"
+                        }
+                    }
+                },
+                {
+                    "name": "曼德矿场",
+                    "param": {
+                        "Recognition": {
+                            "text": "曼德矿场"
+                        }
+                    }
+                },
+                {
+                    "name": "修格里城",
+                    "param": {
+                        "Recognition": {
+                            "text": "修格里城"
+                        }
+                    }
+                },
+                {
+                    "name": "阿妮塔能源研究所",
+                    "param": {
+                        "Recognition": {
+                            "text": "阿妮塔能源研究所"
+                        }
+                    }
+                },
+                {
+                    "name": "荒原站",
+                    "param": {
+                        "Recognition": {
+                            "text": "荒原站"
+                        }
+                    }
+                }
+
+            ]
         }
-    }
+    },
+    "version": "Release"
 }
