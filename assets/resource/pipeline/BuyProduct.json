@@ -1,0 +1,85 @@
+{
+    "Product": {
+        "next": [
+            "EnterExchange"
+        ]
+    },
+    "EnterExchange": {
+        "next": [
+            "EnterBuy",
+            "EnterCityExchange",
+            "VisitCity"
+        ]
+    },
+    "VisitCity": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "text": "访问城市",
+        "roi": [1130,475,90,25],
+        "action": "Click"
+    },
+    "EnterCityExchange": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "text": "交易所",
+        "action": "Click",
+        "target_offset": [0,70,0,0]
+    },
+    "EnterBuy": {
+        "recognition": "OCR",
+        "text": "我要买",
+        "roi": [790,310,70,30],
+        "action": "Click",
+        "next": [
+            "SearchProduct"
+        ]
+    },
+    "SearchProduct": {
+        "next": [
+            "FindProduct",
+            "ProductListDown"
+        ]
+    },
+    "FindProduct": {
+        "recognition": "OCR",
+        "roi": [620,140,230,530],
+        "text": "红茶",
+        "action": "Click",
+        "next": [
+            "ConfirmBuy"
+        ]
+    },
+    "ConfirmBuy": {
+        "recognition": "OCR",
+        "roi": [1040,635,60,25],
+        "text": "买入",
+        "action": "Click",
+        "next": [
+            "ExitExchange"
+        ]
+    },
+    "ProductListDown": {
+        "is_sub": true,
+        "action": "Swipe",
+        "begin": [680,600,0,0],
+        "end":[680,200,0,0]
+    },
+    "ExitExchange": {
+        "recognition": "OCR",
+        "ori": [570,505,50,25],
+        "text": "纳税",
+        "action": "Click",
+        "target": [400,640,0,0],
+        "times_limit": 5,
+        "next": [
+            "ReturnMain"
+        ]
+    },
+    "ReturnMain": {
+        "recognition": "TemplateMatch",
+        "ori": [145,10,245,70],
+        "template": "General/ReturnMain.png",
+        "threshold": 0.5,
+        "action": "Click"
+    }
+}
