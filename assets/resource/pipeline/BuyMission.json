@@ -1,0 +1,347 @@
+{
+    "BuyOver": {
+        "target": [162, 14, 72, 46],
+        "action": "Click"
+    },
+    "BuyStart": {
+        "target": [211,12,20,31],
+        "action": "Click",
+        "next": [
+            "BM_StartClick",
+            "BM_VisitCity",
+            "BM_MoveCameraLeft"
+        ]
+    },
+    "BM_StartClick": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": [
+            "Trade/TradeOver.png"
+        ],
+        "roi": [568,666,144,34],
+        "action": "Click"
+    },
+    "BM_VisitCity": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "roi": [1131, 473, 86, 24],
+        "text": "访问城市",
+        "action": "Click"
+    },
+    "BM_MoveCameraLeft": {
+        "action": "Swipe",
+        "begin": [1200,360,0,0],
+        "end":[200,360,0,0],
+        "next": [
+            "BM_GoJYS",
+            "BM_MoveCameraLeft1"
+        ]
+    },
+    "BM_MoveCameraLeft1": {
+        "action": "Swipe",
+        "begin": [1200,360,0,0],
+        "end":[200,360,0,0],
+        "next": [
+            "BM_GoJYS",
+            "BM_MoveCameraDown"
+        ]
+    },
+    "BM_MoveCameraDown": {
+        "action": "Swipe",
+        "begin": [640,680,0,0],
+        "end":[640,180,0,0],
+        "next": [
+            "BM_GoJYS",
+            "BM_MoveCameraDown1"
+        ]
+    },
+    "BM_MoveCameraDown1": {
+        "action": "Swipe",
+        "begin": [640,680,0,0],
+        "end":[640,180,0,0],
+        "next": [
+            "BM_GoJYS",
+            "BM_MoveCameraRight"
+        ]
+    },
+    "BM_MoveCameraRight": {
+        "action": "Swipe",
+        "begin": [200,360,0,0],
+        "end":[1200,360,0,0],
+        "next": [
+            "BM_GoJYS",
+            "BM_MoveCameraRight1"
+        ]
+    },
+    "BM_MoveCameraRight1": {
+        "action": "Swipe",
+        "begin": [200,360,0,0],
+        "end":[1200,360,0,0],
+        "next": [
+            "BM_GoJYS",
+            "BM_MoveCameraUp"
+        ]
+    },
+    "BM_MoveCameraUp": {
+        "action": "Swipe",
+        "begin": [640,180,0,0],
+        "end":[640,680,0,0],
+        "next": [
+            "BM_GoJYS",
+            "BM_MoveCameraUp1"
+        ]
+    },
+    "BM_MoveCameraUp1": {
+        "action": "Swipe",
+        "begin": [640,180,0,0],
+        "end":[640,680,0,0],
+        "next": [
+            "BM_GoJYS",
+            "BuyStart"
+        ]
+    },
+    "BM_GoJYS": {
+        "recognition": "OCR",
+        "text": [
+            "交易所"
+        ],
+        "target_offset": [0, 70, 5, 2],
+        "action": "Click",
+        "post_delay": 3000,
+        "next": [
+            "WantBuy",
+            "Buy"
+        ]
+    },
+    "WantBuy": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": [
+            "Trade/WantBuy.png"
+        ],
+        "roi":[739,295,162,61],
+        "action": "Click",
+        "next": [
+            "ClickShop"
+        ]
+    },
+    "Buy": {
+        "next": [
+            "BM_NothingBuyIn",
+            "BM_Haggle",
+            "BuyIn",
+            "BuyComplete"
+        ]
+    },
+    "BM_NothingBuyIn": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "text": "请选择要购买的交易品",
+        "roi": [515,336,252,50],
+        "next": "BuyOver"
+    },
+    "BM_Haggle": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": [
+            "Trade/Haggle.png"
+        ],
+        "roi": [1114,449,125,30],
+        "action": "Click"
+    },
+    "BuyIn": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": [
+            "Trade/BuyIn.png"
+        ],
+        "roi": [990,627,114,42],
+        "action": "Click",
+        "post_delay": 3000
+    },
+    "BuyComplete": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Trade/TradeOver.png"
+        ],
+        "roi": [568,666,144,34],
+        "action": "Click",
+        "next": "BuyOver"
+    },
+    "ClickShop": {
+        "times_limit": 3,
+        "next": [
+            "ClickLowPrice_1",
+            "ClickLowPrice_2",
+            "ClickLowPrice_3",
+            "ClickLowPrice_4",
+            "ClickLowPrice_last1",
+            "ClickLowPrice_last2",
+            "ClickLowPrice_last3",
+            "ClickLowPrice_last4",
+            "swipe_up_4unit"
+        ]
+    },
+    "ClickLowPrice_1": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Trade/LowPrice1.png",
+            "Trade/LowPrice2.png"
+        ],
+        "threshold":[0.96, 0.96],
+        "roi": [
+            780,
+            160,
+            60,
+            60
+        ],
+        "action": "Click",
+        "next": [
+            "ClickLowPrice_2",
+            "ClickLowPrice_3",
+            "ClickLowPrice_4",
+            "ClickLowPrice_last1",
+            "ClickLowPrice_last2",
+            "ClickLowPrice_last3",
+            "ClickLowPrice_last4",
+            "swipe_up_4unit"
+        ]
+    },
+    "ClickLowPrice_2": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Trade/LowPrice1.png",
+            "Trade/LowPrice2.png"
+        ],
+        "threshold":[0.96, 0.96],
+        "roi": [
+            780,
+            280,
+            60,
+            60
+        ],
+        "action": "Click",
+        "next": [
+            "ClickLowPrice_3",
+            "ClickLowPrice_4",
+            "ClickLowPrice_last1",
+            "ClickLowPrice_last2",
+            "ClickLowPrice_last3",
+            "ClickLowPrice_last4",
+            "swipe_up_4unit"
+        ]
+    },
+    "ClickLowPrice_3": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Trade/LowPrice1.png",
+            "Trade/LowPrice2.png"
+        ],
+        "threshold":[0.96, 0.96],
+        "roi": [
+            780,
+            400,
+            60,
+            60
+        ],
+        "action": "Click",
+        "next": [
+            "ClickLowPrice_4",
+            "ClickLowPrice_last1",
+            "ClickLowPrice_last2",
+            "ClickLowPrice_last3",
+            "ClickLowPrice_last4",
+            "swipe_up_4unit"
+        ]
+    },
+    "ClickLowPrice_4": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Trade/LowPrice1.png",
+            "Trade/LowPrice2.png"
+        ],
+        "threshold":[0.96, 0.96],
+        "roi": [
+            780,
+            515,
+            60,
+            60
+        ],
+        "action": "Click",
+        "next": [
+            "ClickLowPrice_last1",
+            "ClickLowPrice_last2",
+            "ClickLowPrice_last3",
+            "ClickLowPrice_last4",
+            "swipe_up_4unit"
+        ]
+    },
+    "ClickLowPrice_last1": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Trade/LowPrice1.png",
+            "Trade/LowPrice2.png"
+        ],
+        "threshold":[0.96, 0.96],
+        "roi": [
+            780,
+            240,
+            60,
+            60
+        ],
+        "action": "Click",
+        "next": [
+            "ClickLowPrice_last2",
+            "ClickLowPrice_last3",
+            "ClickLowPrice_last4",
+            "swipe_up_4unit"
+        ]
+    },
+    "ClickLowPrice_last2": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Trade/LowPrice1.png",
+            "Trade/LowPrice2.png"
+        ],
+        "threshold":[0.96, 0.96],
+        "roi": [780,360,60,60],
+        "action": "Click",
+        "next": [
+            "ClickLowPrice_last3",
+            "ClickLowPrice_last4",
+            "swipe_up_4unit"
+        ]
+    },
+    "ClickLowPrice_last3": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Trade/LowPrice1.png",
+            "Trade/LowPrice2.png"
+        ],
+        "threshold":[0.96, 0.96],
+        "roi": [780,480,60,60],
+        "action": "Click",
+        "next": [
+            "ClickLowPrice_last4",
+            "swipe_up_4unit"
+        ]
+    },
+    "ClickLowPrice_last4": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Trade/LowPrice1.png",
+            "Trade/LowPrice2.png"
+        ],
+        "threshold":[0.96, 0.96],
+        "roi": [780,580,60,60],
+        "action": "Click",
+        "next": "swipe_up_4unit"
+    },
+    "swipe_up_4unit": {
+        "begin": [690, 620, 5, 2],
+        "end": [690, 153, 5, 2],
+        "duration": 5000,
+        "action": "Swipe",
+        "next": "ClickShop"
+    }
+}
