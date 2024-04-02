@@ -105,7 +105,7 @@
         "text": "前往目的地",
         "action": "Click",
         "next": [
-            "DriveCombat"
+            "Drive_Combat"
         ]
     },
     "DriveCombat": {
@@ -134,6 +134,15 @@
         "recognition": "OCR",
         "roi": [1120,615,70,25],
         "text": "下一步",
+        "action": "Click",
+        "next": [
+            "LeaveFailBattle"
+        ]
+    },
+    "LeaveFailBattle": {
+        "recognition": "OCR",
+        "roi": [908,520,42,30],
+        "text": "报案",
         "action": "Click"
     },
     "StartBattle": {

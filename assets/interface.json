@@ -40,6 +40,10 @@
             ]
         },
         {
+            "name": "自动购买低价物品",
+            "entry": "BuyStart"
+        },
+        {
             "name": "关闭游戏",
             "entry": "CloseApp"
         }
