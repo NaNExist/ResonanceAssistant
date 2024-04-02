@@ -32,20 +32,12 @@ ResonanceAssistant是一个基于[MAAFramework](https://github.com/MaaXYZ/MaaFra
 ### 当前目标：
 
 - 接入[MAAFramework](https://github.com/MaaXYZ/MaaFramework)实现基础清日常
-  
-  - 增加说明文档
-
-  - 重构文件存放位置，区分开发和Release
 
   - 完善基础管线任务
 
+  - 实现GUI
+  
 ### 长期目标：
-
-- 实现GUI~~现在盘算着用Qt开发~~
-
-- 计算跑商最大化收益路线
-
-- 实现商品数据实时监测&上传(可能是最重要的一点) Upd:好像可以抓包获取，那就不考虑用图像识别实现这个功能了
 
 - 自动跑商
 
