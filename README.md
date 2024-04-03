@@ -10,6 +10,8 @@
 
 </div>
 
+## 本项目已经废弃，后续不再进行更新。请移步至Maa Resonance或ResonanceAssistant_Airtest
+
 ResonanceAssistant是一个基于[MAAFramework](https://github.com/MaaXYZ/MaaFramework)框架实现游戏[~~唢呐蕾丝~~《雷索纳斯》](https://soli-reso.com/)自动清日常和~~最大化列车跑商收益~~的软件。
 
 基于全新架构的 列车长 小助手。图像技术 + 模拟控制，解放双手！
